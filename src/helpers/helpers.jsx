@@ -21,3 +21,11 @@ export const productsToSell = ((productArray) => {
     const soldStock = productsSold(productArray);
     return initialStock - soldStock;
 });
+export const productDetails = (productArray) => {
+    const productBrand = productArray.brand;
+    const productType = productArray.type;
+    const productName = productArray.name;
+    const resultString = `${productBrand} - ${productType} - ${productName}`;
+    return resultString;
+};
+
