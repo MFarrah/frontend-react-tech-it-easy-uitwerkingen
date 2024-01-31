@@ -19,6 +19,8 @@ console.log(suitableForSports);
 
 
 
+const ambilight = inventory.filter(tv => tv.options[4].applicable === true);
+console.log(ambilight);
 
 
 
