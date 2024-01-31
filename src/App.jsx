@@ -32,11 +32,16 @@ function App() {
                     <h1 className="info-panel-textToSell">{productsToSell(inventory)}</h1>
                 </article>
             </section>
-            <nav>
-                <button type="button">prijs</button>
-                <button type="button">prijs</button>
-                <button type="button">prijs</button>
-                <button type="button">prijs</button>
+            <section className="highlight-container">
+                <article className="inner-highlight-container">
+                    <div></div>
+                </article>
+            </section>
+            <nav className="nav-bar">
+                <button type="button" className="triggerButton">Meest verkochte eerst</button>
+                <button type="button" className="triggerButton">Goedkoopste eerst</button>
+                <button type="button" className="triggerButton">Geschikt voor sport eerst</button>
+                <button type="button" className="triggerButton">Grootste scherm eerst</button>
             </nav>
             <section>
                 <article>
