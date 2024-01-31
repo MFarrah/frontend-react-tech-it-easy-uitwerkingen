@@ -60,6 +60,7 @@ header {
     margin: 10px 10px;
     border-radius: 2px;
     border: cornflowerblue dotted 1px;
+
 }
 
 .info-panel-sold {
@@ -130,6 +131,24 @@ header {
     margin-bottom: 20%;
 
 }
+.productList-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+
+}
+.product-container {
+
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
 
 .highlight-container {
 
@@ -141,6 +160,7 @@ header {
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 10px;
+
 }
 
 .inner-highlight-container-image {

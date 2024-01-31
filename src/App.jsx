@@ -49,8 +49,10 @@ function App() {
                     <br></br>
                     <h4>{formatSizes(bestSellingTv)}</h4>
                     <br></br>
-                    <h5 className="options"><img className="icon" src={checkIcon} alt="check"/> wifi <img className="icon" src={notIcon} alt="not"/> speech <img
-                        className="icon" src={checkIcon} alt="check"/> hdr <img className="icon" src={checkIcon} alt="check"/> bluetooth <img
+                    <h5 className="options"><img className="icon" src={checkIcon} alt="check"/> wifi <img
+                        className="icon" src={notIcon} alt="not"/> speech <img
+                        className="icon" src={checkIcon} alt="check"/> hdr <img className="icon" src={checkIcon}
+                                                                                alt="check"/> bluetooth <img
                         className="icon" src={notIcon} alt="not"/> ambilight</h5>
                 </div>
             </section>
@@ -60,14 +62,9 @@ function App() {
                 <button type="button" className="triggerButton">Geschikt voor sport eerst</button>
                 <button type="button" className="triggerButton">Grootste scherm eerst</button>
             </nav>
-            <section>
-                <article>
+           
 
-                </article>
-                <article>
 
-                </article>
-            </section>
 
 
         </main>
