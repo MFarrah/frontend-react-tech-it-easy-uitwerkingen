@@ -1,16 +1,10 @@
 import './App.css';
 import {bestSellingTv, inventory} from "./constants/inventory.js";
-import {
-    productsInStock,
-    productsSold,
-    productsToSell,
-    productDetails,
-    formatPrice,
-    formatSizes,
-} from "./helpers/helpers.jsx";
+import {productsInStock, productsSold, productsToSell, productDetails, formatPrice, formatSizes} from "./helpers/helpers.jsx";
 import headerLogo from "./assets/tech_it_easy.png";
 import checkIcon from "./assets/check.png";
 import notIcon from "./assets/minus.png";
+
 
 function App() {
     return (<>
@@ -62,10 +56,41 @@ function App() {
                 <button type="button" className="triggerButton">Geschikt voor sport eerst</button>
                 <button type="button" className="triggerButton">Grootste scherm eerst</button>
             </nav>
-           
 
-
-
+            <section className="productList-container">
+                {inventory.map((product) => {
+                    return (
+                        <article className="product-container">
+                            <img className="inner-highlight-container-image" src={product.sourceImg} alt={product.name}/>
+                            <div className="inner-highlight-container-text">
+                            <h3>{productDetails(product)}</h3>
+                            <br></br>
+                            <h2>{formatPrice(product)}</h2>
+                            <br></br>
+                            <h4>{formatSizes(product)}</h4>
+                            <br></br>
+                            <h5>
+                                {product.options.wifi ? <img className="icon" src={checkIcon} alt="check"/> :
+                                    <img className="icon" src={notIcon} alt="not"/>}
+                                wifi
+                                {product.options.speech ? <img className="icon" src={checkIcon} alt="check"/> :
+                                    <img className="icon" src={notIcon} alt="not"/>}
+                                speech
+                                {product.options.hdr ? <img className="icon" src={checkIcon} alt="check"/> :
+                                    <img className="icon" src={notIcon} alt="not"/>}
+                                hdr
+                                {product.options.bluetooth ? <img className="icon" src={checkIcon} alt="check"/> :
+                                    <img className="icon" src={notIcon} alt="not"/>}
+                                bluetooth
+                                {product.options.ambilight ? <img className="icon" src={checkIcon} alt="check"/> :
+                                    <img className="icon" src={notIcon} alt="not"/>}
+                                ambilight
+                            </h5>
+                            </div>
+                        </article>
+                    );
+                })}
+            </section>
 
         </main>
         <footer>

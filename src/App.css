@@ -133,6 +133,7 @@ header {
 }
 .productList-container {
 
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,7 +148,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 10px;
+    border-bottom: black dotted 1px;
 }
 
 .highlight-container {
@@ -157,8 +161,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     border: black dotted 1px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 20px;
     padding: 10px;
 
 }
