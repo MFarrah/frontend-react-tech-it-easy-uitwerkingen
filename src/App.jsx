@@ -20,6 +20,7 @@ function App() {
             </div>
         </header>
         <main className="body-layout">
+            <div className="nav-bar"><h2>Dashboard</h2></div>
             <section className="outer-info-panel">
                 <article className="info-panel-stock">
                     <p className="info-panel-text">Aantal ingekochte producten</p>
@@ -34,6 +35,7 @@ function App() {
                     <h1 className="info-panel-textToSell">{productsToSell(inventory)}</h1>
                 </article>
             </section>
+            <div className="nav-bar"><h2>Best verkochte TV</h2></div>
             <section className="highlight-container">
 
                 <img className="inner-highlight-container-image"
