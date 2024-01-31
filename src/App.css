@@ -36,16 +36,17 @@ header {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px 40px;
+
 }
 
 
 .info-panel-stock {
     background-color: rgba(231, 225, 225, 0.25);
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,8 +57,8 @@ header {
 }
 .info-panel-sold {
     background-color: rgba(231, 225, 225, 0.25);
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,8 +69,8 @@ header {
 }
 .info-panel-toSell {
     background-color: rgba(231, 225, 225, 0.25);
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,25 +119,36 @@ header {
     margin-bottom: 20%;
 
 }
+
 .highlight-container {
-    width: 100%;
-    background-color: #ffffff;
+
+    background-color: rgba(247, 246, 246, 0.66);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    border: black dotted 1px;
     margin-bottom: 20px;
-
+    padding: 10px;
 }
-.inner-highlight-container {
-    width: 640px;
-    height: 200px;
+.inner-highlight-container-image {
+    object-fit: contain;
+    width: 280px;
     background-color: rgba(247, 246, 246, 0.08);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border: black dotted 1px;
+    margin: 10px 10px;
+}
+.inner-highlight-container-text {
+    width: 660px;
+    height: 250px;
+    background-color: rgba(247, 246, 246, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+    margin: 10px 10px;
 }
 .nav-bar {
     width: 100%;
@@ -165,4 +177,16 @@ header {
     border-radius: 2px;
     border: black dotted 1px;
     flex-shrink: initial;
+}
+
+.icon {
+    width: 8px;
+    object-fit: contain;
+}
+
+.options {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

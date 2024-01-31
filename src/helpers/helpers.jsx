@@ -40,7 +40,18 @@ export const formatSizes = (productArray) => {
     productArray.availableSizes.forEach((size) => {
         const sizeInInches = size;
         const sizeInCentimeters = size * inchesToCentimeters;
-        resultString += `${sizeInInches} inches (${sizeInCentimeters.toFixed(2)} cm), `;
+        resultString += `${sizeInInches} inches (${sizeInCentimeters.toFixed(2)} cm) | `;
     });
     return resultString.slice(0, -2);
 };
+
+export const bestSellingProduct = (productArray) => {
+    let bestSellingProduct = productArray[0];
+    productArray.forEach((product) => {
+        if (product.sold > bestSellingProduct.sold) {
+            bestSellingProduct = product;
+        }
+    });
+    return bestSellingProduct;
+};
+

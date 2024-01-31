@@ -1,14 +1,16 @@
 import './App.css';
-import {inventory} from "./constants/inventory.js";
+import {bestSellingTv, inventory} from "./constants/inventory.js";
 import {
     productsInStock,
     productsSold,
     productsToSell,
     productDetails,
     formatPrice,
-    formatSizes
+    formatSizes,
 } from "./helpers/helpers.jsx";
 import headerLogo from "./assets/tech_it_easy.png";
+import checkIcon from "./assets/check.png";
+import notIcon from "./assets/minus.png";
 
 function App() {
     return (<>
@@ -33,9 +35,22 @@ function App() {
                 </article>
             </section>
             <section className="highlight-container">
-                <article className="inner-highlight-container">
-                    <div></div>
-                </article>
+
+                <img className="inner-highlight-container-image"
+                     src='https://image.coolblue.nl/max/500x500/products/1786196'
+                     alt="Samsung UHD 55AU7040 Crystal"/>
+
+                <div className="inner-highlight-container-text">
+                    <h3>{productDetails(bestSellingTv)}</h3>
+                    <br></br>
+                    <h2>{formatPrice(bestSellingTv)}</h2>
+                    <br></br>
+                    <h4>{formatSizes(bestSellingTv)}</h4>
+                    <br></br>
+                    <h5 className="options"><img className="icon" src={checkIcon} alt="check"/> wifi <img className="icon" src={notIcon} alt="not"/> speech <img
+                        className="icon" src={checkIcon} alt="check"/> hdr <img className="icon" src={checkIcon} alt="check"/> bluetooth <img
+                        className="icon" src={notIcon} alt="not"/> ambilight</h5>
+                </div>
             </section>
             <nav className="nav-bar">
                 <button type="button" className="triggerButton">Meest verkochte eerst</button>
@@ -53,9 +68,6 @@ function App() {
             </section>
 
 
-            <h1>{productDetails(inventory[0])}</h1>
-            <h1>{formatPrice(inventory[0])}</h1>
-            <h2>{formatSizes(inventory[0])}</h2>
         </main>
         <footer>
 
