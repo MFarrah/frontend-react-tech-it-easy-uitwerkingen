@@ -1,5 +1,3 @@
-import check from "../assets/check.png";
-import minus from "../assets/minus.png";
 
 export const productsSold = ((productArray) => {
     let total = 0;
@@ -54,4 +52,5 @@ export const bestSellingProduct = (productArray) => {
     });
     return bestSellingProduct;
 };
+
 

@@ -21,6 +21,13 @@ header {
     align-items: center;
 
 }
+.logoBox {
+    transition: transform 0.9s ease-in-out;
+}
+
+.logoBox:hover {
+    transform: scale(0.9);
+}
 
 .logoBox {
     display: flex;
@@ -62,6 +69,7 @@ header {
     border: cornflowerblue dotted 1px;
 
 }
+
 
 .info-panel-sold {
     background-color: rgb(237, 239, 235);
@@ -204,6 +212,23 @@ header {
     border: black dotted 1px;
     flex-shrink: initial;
 }
+.triggerButton:hover {
+    background-color: rgb(235, 234, 234);
+    color: #000000;
+    border: black dotted 1px;
+}
+
+.triggerButton:active {
+    background-color: rgb(215, 215, 196);
+    color: #000000;
+    border: black dotted 1px;
+}
+.triggerButton:focus {
+    background-color: rgb(229, 229, 229);
+    color: #000000;
+    border: black dotted 1px;
+}
+
 
 .icon {
     width: 8px;

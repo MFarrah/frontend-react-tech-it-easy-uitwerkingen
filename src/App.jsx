@@ -4,10 +4,11 @@ import {productsInStock, productsSold, productsToSell, productDetails, formatPri
 import headerLogo from "./assets/tech_it_easy.png";
 import checkIcon from "./assets/check.png";
 import notIcon from "./assets/minus.png";
-
+import {tvTypes, tvType, suitableForSports, ambilight, soldOut} from "./constants/methodTesting.js";
 
 function App() {
-    return (<>
+    return (
+        <>
         <header>
             <div className="logoBox">
                 <img src={headerLogo} alt="Tech it easy logo"/>
@@ -57,6 +58,7 @@ function App() {
                 <button type="button" className="triggerButton">Grootste scherm eerst</button>
             </nav>
 
+
             <section className="productList-container">
                 {inventory.map((product) => {
                     return (
@@ -69,7 +71,7 @@ function App() {
                             <br></br>
                             <h4>{formatSizes(product)}</h4>
                             <br></br>
-                            <h5>
+                            <h5 className="options">
                                 {product.options.wifi ? <img className="icon" src={checkIcon} alt="check"/> :
                                     <img className="icon" src={notIcon} alt="not"/>}
                                 wifi
