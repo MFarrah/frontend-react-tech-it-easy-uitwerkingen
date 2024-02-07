@@ -1,12 +1,11 @@
 
-
 export const productsSold = ((productArray) => {
     let total = 0;
     productArray.forEach((product) => {
         total += product.sold;
     });
     return total;
-})
+});
 
 export const productsInStock = ((productArray) => {
     let total = 0;
@@ -28,4 +27,30 @@ export const productDetails = (productArray) => {
     const resultString = `${productBrand} - ${productType} - ${productName}`;
     return resultString;
 };
+
+export const formatPrice = (productArray) => {
+    return `€${productArray.price},-`;
+};
+
+export const formatSizes = (productArray) => {
+    const inchesToCentimeters = 2.54;
+    let resultString = "";
+    productArray.availableSizes.forEach((size) => {
+        const sizeInInches = size;
+        const sizeInCentimeters = size * inchesToCentimeters;
+        resultString += `${sizeInInches} inches (${sizeInCentimeters.toFixed(2)} cm) | `;
+    });
+    return resultString.slice(0, -2);
+};
+
+export const bestSellingProduct = (productArray) => {
+    let bestSellingProduct = productArray[0];
+    productArray.forEach((product) => {
+        if (product.sold > bestSellingProduct.sold) {
+            bestSellingProduct = product;
+        }
+    });
+    return bestSellingProduct;
+};
+
 
